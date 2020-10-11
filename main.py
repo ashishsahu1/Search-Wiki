@@ -1,25 +1,19 @@
-from flask import Flask, render_template
-from flask.globals import request
-import requests
-from bs4 import BeautifulSoup
+from flask import Flask, render_template, request
+import wikipedia
 
 app = Flask(__name__)
 
-def getWiki(url):
-    req_obj = requests.get(url)
-    text = req_obj.text
-    soup = BeautifulSoup(text)
-    
-
-
-@app.route("/", methods = ["GET","POST"])
-def index():
-    if request.method == "POST":
-        url = request.form.get("url")
-        return str(url)
+@app.route("/")
+def home():
     return render_template("index.html")
 
-
-
+@app.route("/results", methods = ['POST'])
+def wiki():
+    if request.method == 'POST':
+        term = request.form['term']
+        data = wikipedia.summary(str(term))
+        return render_template("result.html", data = data)
+    else:
+        return render_template('login.html')
 if __name__ == "__main__":
     app.run(debug=True)
