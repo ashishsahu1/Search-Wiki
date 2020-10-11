@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css')}} ">
-    <title>Sum-up-Wiki</title>
+    <title>Search Wiki</title>
 </head>
 <body>
-    <form id="term" action="http://127.0.0.1:5000/results" method="POST">
+    <h1>Search Wiki</h1>
+    <form id="termform" action="http://127.0.0.1:5000/results" method="POST">
         <input type="text" name="term" id="term">
-        <input type="submit" value="submit" id="submit">
+        <input type="submit" value="Search" id="submit">
     </form>
 </body>
 </html>
