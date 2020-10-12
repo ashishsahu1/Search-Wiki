@@ -9,9 +9,13 @@
 <body>
 
     <div class="container">
-        <p>{{ term }}</p>
+        <p>About {{ term }}</p>
         <p>{{ data }}</p>
-        <img src={{ imgurl }} alt="faild to load" class="image">
+        <p>Images</p>
+        {% for i in range(l) %}
+       <img src= {{ imgurllist[i] }} alt="faild to load" class="image">
+        {% endfor %} 
+       
     </div>
 
 </body>
