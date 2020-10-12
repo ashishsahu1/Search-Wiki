@@ -19,7 +19,7 @@ def wiki():
         imgurl = img(term.replace(" ",""))
         return render_template("result.html", data = data, imgurl = imgurl)
     else:
-        return render_template('login.html')
+        return render_template('result.html')
 
 
 def img(term):
