@@ -45,7 +45,10 @@ body{
 .container img{
     align-items: center;
     margin: 10px;
+    margin-left: 50px;
     border-radius: 8px;
     max-width: 50%;
     height: auto;
+    border-color: white;
+    border-width: 10px;
 }
