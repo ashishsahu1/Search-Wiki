@@ -17,7 +17,7 @@ def wiki():
         term = request.form['term']
         data = wikipedia.summary(str(term))
         imgurl = img(term.replace(" ",""))
-        return render_template("result.html", data = data, imgurl = imgurl)
+        return render_template("result.html",term = term, data = data, imgurl = imgurl)
     else:
         return render_template('result.html')
 

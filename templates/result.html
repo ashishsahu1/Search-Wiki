@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/results.css')}} ">
+    <title>Wiki Result</title>
 </head>
 <body>
-    <img src={{ imgurl }} alt="faild to load">
-    <p>{{ data }}</p>
+
+    <div class="container">
+        <p>{{ term }}</p>
+        <p>{{ data }}</p>
+        <img src={{ imgurl }} alt="faild to load" class="image">
+    </div>
+
 </body>
 </html>

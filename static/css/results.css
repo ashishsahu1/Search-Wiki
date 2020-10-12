@@ -1,3 +1,41 @@
 body{
     background-color: #536DFE;
+    position: relative;
+}
+
+.container{
+    flex: content;
+}
+
+.container p{
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.705);
+    padding: 20px;
+    margin: 40px;
+    top: 50px;
+    color: black;
+    font-family: sans-serif;
+}
+
+.container p:nth-child(1){
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+}
+
+.container p:nth-child(2){
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.container img{
+    margin: 30px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
 }
