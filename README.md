@@ -28,6 +28,7 @@ Search-Wiki is a seacrh engine webapp which uses api to find wikipedia summary a
 - Go to  http://127.0.0.1:5000/
 <br>
 <br>
+
 ## Requirements📌
 
 ```Python==3.7.7
